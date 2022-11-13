@@ -72,6 +72,22 @@ class _HomeScreenState extends State<HomeScreen> {
                       )
                     ],
                   ),
+                ),
+
+                // Upcoming flights header
+                const Gap(40),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Upcoming Flights",
+                      style: Styles.headLineStyle2,
+                    ),
+                    Text("View all",
+                        style: Styles.textStyle.copyWith(
+                          color: Styles.primaryColor,
+                        ))
+                  ],
                 )
               ],
             ),
