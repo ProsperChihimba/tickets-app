@@ -30,7 +30,7 @@ class _ButtomBarState extends State<ButtomBar> {
     return Scaffold(
       body: Center(child: _widgetOptions[_selectedIndex]),
       bottomNavigationBar: BottomNavigationBar(
-        elevation: 10,
+        elevation: 0,
         currentIndex: _selectedIndex,
         type: BottomNavigationBarType.fixed,
         onTap: _onItemTapped,
