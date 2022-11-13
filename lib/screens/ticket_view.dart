@@ -177,7 +177,8 @@ class TicketView extends StatelessWidget {
                     bottomLeft: Radius.circular(21),
                     bottomRight: Radius.circular(21),
                   )),
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.only(
+                  left: 16.0, top: 10.0, right: 16.0, bottom: 16.0),
               child: Column(
                 children: [
                   Row(
