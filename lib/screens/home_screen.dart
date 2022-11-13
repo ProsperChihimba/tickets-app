@@ -98,6 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
           // Ticket view row
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.only(left: 20),
             child: Row(
               children: const [TicketView(), TicketView()],
             ),
