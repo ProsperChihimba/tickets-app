@@ -1,3 +1,4 @@
+import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:tickets/utils/app_styles.dart';
@@ -48,6 +49,29 @@ class _HomeScreenState extends State<HomeScreen> {
                               image: AssetImage("assets/images/img_1.png"))),
                     )
                   ],
+                ),
+
+                // Search container
+                const Gap(25),
+                Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: const Color(0xFFF4F6FD)),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                  child: Row(
+                    children: [
+                      const Icon(
+                        FluentSystemIcons.ic_fluent_search_regular,
+                        color: Color(0xFFBFC205),
+                      ),
+                      const Gap(5),
+                      Text(
+                        "Search",
+                        style: Styles.headLineStyle4,
+                      )
+                    ],
+                  ),
                 )
               ],
             ),
