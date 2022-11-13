@@ -90,12 +90,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         ))
                   ],
                 ),
-
-                // Ticket view row
-                const TicketView()
               ],
             ),
-          )
+          ),
+
+          const Gap(15),
+          // Ticket view row
+          const TicketView()
         ],
       ),
     );
