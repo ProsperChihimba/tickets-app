@@ -1,6 +1,7 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:tickets/screens/ticket_view.dart';
 import 'package:tickets/utils/app_styles.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -88,7 +89,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           color: Styles.primaryColor,
                         ))
                   ],
-                )
+                ),
+
+                // Ticket view row
+                const TicketView()
               ],
             ),
           )
