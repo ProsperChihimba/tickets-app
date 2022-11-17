@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:tickets/utils/app_layout.dart';
 import 'package:tickets/utils/app_styles.dart';
 
@@ -10,12 +11,22 @@ class HotelScreen extends StatelessWidget {
     final size = AppLayout.getSize(context);
     return Container(
       width: size.width * 0.6,
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 17),
+      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 17),
       margin: const EdgeInsets.only(right: 17, top: 5),
       decoration: BoxDecoration(
-          color: Styles.primaryColor, borderRadius: BorderRadius.circular(24)),
+        color: Styles.primaryColor,
+        borderRadius: BorderRadius.circular(24),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.shade200,
+            blurRadius: 20,
+            spreadRadius: 5,
+          ),
+        ],
+      ),
       height: 350,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             height: 180,
@@ -27,7 +38,24 @@ class HotelScreen extends StatelessWidget {
                 image: AssetImage("assets/images/one.png"),
               ),
             ),
-          )
+          ),
+
+          // view texts
+          const Gap(10),
+          Text(
+            "Open space",
+            style: Styles.headLineStyle2.copyWith(color: Styles.kakiColor),
+          ),
+          const Gap(5),
+          Text(
+            "London",
+            style: Styles.headLineStyle3.copyWith(color: Colors.white),
+          ),
+          const Gap(8),
+          Text(
+            "\$40/night",
+            style: Styles.headLineStyle.copyWith(color: Styles.kakiColor),
+          ),
         ],
       ),
     );
