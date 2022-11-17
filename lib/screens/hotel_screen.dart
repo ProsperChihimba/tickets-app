@@ -1,10 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:tickets/utils/app_layout.dart';
+import 'package:tickets/utils/app_styles.dart';
 
 class HotelScreen extends StatelessWidget {
   const HotelScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    final size = AppLayout.getSize(context);
+    return Container(
+      width: size * 0.6,
+      height: 350,
+      child: Column(
+        children: [
+          Container(
+            height: 180,
+            decoration: BoxDecoration(
+              color: Styles.primaryColor,
+              image: DecorationImage(
+                image: AssetImage("assets/images/one.pg"),
+              ),
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
