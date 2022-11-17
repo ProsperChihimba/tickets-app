@@ -1,6 +1,7 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:tickets/screens/hotel_screen.dart';
 import 'package:tickets/screens/ticket_view.dart';
 import 'package:tickets/utils/app_styles.dart';
 
@@ -119,6 +120,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     style: Styles.textStyle.copyWith(
                       color: Styles.primaryColor,
                     ))
+              ],
+            ),
+          ),
+          const Gap(15),
+          // Hotel screen view
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.only(left: 20),
+            child: Row(
+              children: const [
+                HotelScreen(),
+                HotelScreen(),
               ],
             ),
           ),
