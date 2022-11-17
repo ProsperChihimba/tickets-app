@@ -102,7 +102,26 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Row(
               children: const [TicketView(), TicketView()],
             ),
-          )
+          ),
+
+          //
+          const Gap(15),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Hotels",
+                  style: Styles.headLineStyle2,
+                ),
+                Text("View all",
+                    style: Styles.textStyle.copyWith(
+                      color: Styles.primaryColor,
+                    ))
+              ],
+            ),
+          ),
         ],
       ),
     );
