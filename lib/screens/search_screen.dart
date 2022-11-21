@@ -170,8 +170,39 @@ class SearchScreen extends StatelessWidget {
                       )
                     ],
                   ),
-
+                  Gap(
+                    AppLayout.getHeight(15),
+                  ),
                   // Last widget
+                  Container(
+                    width: size.width * 0.44,
+                    padding: EdgeInsets.symmetric(
+                      vertical: AppLayout.getHeight(15),
+                      horizontal: AppLayout.getWidth(15),
+                    ),
+                    height: AppLayout.getHeight(210),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFEC6545),
+                      borderRadius: BorderRadius.circular(
+                        AppLayout.getHeight(18),
+                      ),
+                    ),
+                    child: Column(
+                      children: [
+                        Text(
+                          "Take love",
+                          textAlign: TextAlign.center,
+                          style: Styles.headLineStyle2.copyWith(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Gap(
+                          AppLayout.getHeight(15),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               )
             ],
