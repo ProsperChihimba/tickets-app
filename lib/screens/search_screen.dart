@@ -61,8 +61,22 @@ class SearchScreen extends StatelessWidget {
           Gap(AppLayout.getHeight(25)),
           const AppIconText(
               icon: Icons.flight_takeoff_outlined, text: "Departure"),
-          Gap(AppLayout.getHeight(15)),
+          Gap(AppLayout.getHeight(20)),
           const AppIconText(icon: Icons.flight_land_rounded, text: "Arrival"),
+          Gap(AppLayout.getHeight(25)),
+          Container(
+            padding: EdgeInsets.symmetric(
+                vertical: AppLayout.getHeight(15),
+                horizontal: AppLayout.getWidth(15)),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(AppLayout.getWidth(10)),
+                color: Color(0xD91130CE)),
+            child: Text(
+              "Find tickets",
+              textAlign: TextAlign.center,
+              style: Styles.textStyle.copyWith(color: Colors.white),
+            ),
+          )
         ],
       ),
     );
