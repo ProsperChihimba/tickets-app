@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:tickets/utils/app_layout.dart';
 import 'package:tickets/utils/app_styles.dart';
+import 'package:tickets/widgets/icon_text_widget.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
@@ -55,7 +56,13 @@ class SearchScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(AppLayout.getHeight(50)),
                   color: const Color(0xFFF4F7FD)),
             ),
-          )
+          ),
+          //
+          Gap(AppLayout.getHeight(25)),
+          const AppIconText(
+              icon: Icons.flight_takeoff_outlined, text: "Departure"),
+          Gap(AppLayout.getHeight(15)),
+          const AppIconText(icon: Icons.flight_land_rounded, text: "Arrival"),
         ],
       ),
     );
