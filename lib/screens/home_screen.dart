@@ -6,6 +6,7 @@ import 'package:tickets/screens/ticket_view.dart';
 import 'package:tickets/utils/app_info_list.dart';
 import 'package:tickets/utils/app_layout.dart';
 import 'package:tickets/utils/app_styles.dart';
+import 'package:tickets/widgets/double_text_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -81,19 +82,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
                 // Upcoming flights header
                 Gap(AppLayout.getHeight(40)),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Upcoming Flights",
-                      style: Styles.headLineStyle2,
-                    ),
-                    Text("View all",
-                        style: Styles.textStyle.copyWith(
-                          color: Styles.primaryColor,
-                        ))
-                  ],
-                ),
+                const AppDoubleTextWidget(
+                    bigText: "Upcoming Flights", smallText: "View all"),
               ],
             ),
           ),
@@ -114,19 +104,8 @@ class _HomeScreenState extends State<HomeScreen> {
           Gap(AppLayout.getHeight(15)),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(20.0)),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Hotels",
-                  style: Styles.headLineStyle2,
-                ),
-                Text("View all",
-                    style: Styles.textStyle.copyWith(
-                      color: Styles.primaryColor,
-                    ))
-              ],
-            ),
+            child: const AppDoubleTextWidget(
+                bigText: "Hotels", smallText: "View all"),
           ),
           Gap(AppLayout.getHeight(15)),
           // Hotel screen view

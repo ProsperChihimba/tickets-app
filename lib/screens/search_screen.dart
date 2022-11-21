@@ -4,6 +4,8 @@ import 'package:tickets/utils/app_layout.dart';
 import 'package:tickets/utils/app_styles.dart';
 import 'package:tickets/widgets/icon_text_widget.dart';
 
+import '../widgets/double_text_widget.dart';
+
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
 
@@ -70,13 +72,16 @@ class SearchScreen extends StatelessWidget {
                 horizontal: AppLayout.getWidth(15)),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(AppLayout.getWidth(10)),
-                color: Color(0xD91130CE)),
+                color: const Color(0xD91130CE)),
             child: Text(
               "Find tickets",
               textAlign: TextAlign.center,
               style: Styles.textStyle.copyWith(color: Colors.white),
             ),
-          )
+          ),
+          Gap(AppLayout.getHeight(40)),
+          const AppDoubleTextWidget(
+              bigText: "Upcoming Flights", smallText: "View all"),
         ],
       ),
     );
