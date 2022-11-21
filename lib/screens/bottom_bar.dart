@@ -1,6 +1,7 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:tickets/screens/home_screen.dart';
+import 'package:tickets/screens/search_screen.dart';
 
 class ButtomBar extends StatefulWidget {
   const ButtomBar({super.key});
@@ -14,7 +15,7 @@ class _ButtomBarState extends State<ButtomBar> {
 
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeScreen(),
-    const Text("Search"),
+    const SearchScreen(),
     const Text("Tickets"),
     const Text("Profile"),
   ];

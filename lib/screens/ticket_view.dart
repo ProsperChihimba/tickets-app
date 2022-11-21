@@ -27,7 +27,9 @@ class TicketView extends StatelessWidget {
                     topLeft: Radius.circular(21),
                     topRight: Radius.circular(21),
                   )),
-              padding: const EdgeInsets.all(16),
+              padding: EdgeInsets.symmetric(
+                  horizontal: AppLayout.getWidth(16),
+                  vertical: AppLayout.getHeight(16)),
               child: Column(
                 children: [
                   Row(
@@ -86,7 +88,7 @@ class TicketView extends StatelessWidget {
                   ),
 
                   // Ticket first row second wave
-                  const Gap(5),
+                  Gap(AppLayout.getHeight(5)),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -136,7 +138,9 @@ class TicketView extends StatelessWidget {
                   ),
                   Expanded(
                       child: Padding(
-                    padding: const EdgeInsets.all(12.0),
+                    padding: EdgeInsets.symmetric(
+                        horizontal: AppLayout.getWidth(12.0),
+                        vertical: AppLayout.getHeight(12.0)),
                     child: LayoutBuilder(builder:
                         (BuildContext context, BoxConstraints constraints) {
                       return Flex(
@@ -178,8 +182,11 @@ class TicketView extends StatelessWidget {
                     bottomLeft: Radius.circular(21),
                     bottomRight: Radius.circular(21),
                   )),
-              padding: const EdgeInsets.only(
-                  left: 16.0, top: 10.0, right: 16.0, bottom: 16.0),
+              padding: EdgeInsets.only(
+                  left: AppLayout.getWidth(16.0),
+                  top: AppLayout.getHeight(10.0),
+                  right: AppLayout.getWidth(16.0),
+                  bottom: AppLayout.getHeight(16.0)),
               child: Column(
                 children: [
                   Row(
@@ -193,7 +200,7 @@ class TicketView extends StatelessWidget {
                             style: Styles.headLineStyle3
                                 .copyWith(color: Colors.white),
                           ),
-                          const Gap(5),
+                          Gap(AppLayout.getHeight(5)),
                           Text(
                             "Date",
                             style: Styles.headLineStyle4
@@ -209,7 +216,7 @@ class TicketView extends StatelessWidget {
                             style: Styles.headLineStyle3
                                 .copyWith(color: Colors.white),
                           ),
-                          const Gap(5),
+                          Gap(AppLayout.getHeight(5)),
                           Text(
                             "Departure time",
                             style: Styles.headLineStyle4
@@ -225,7 +232,7 @@ class TicketView extends StatelessWidget {
                             style: Styles.headLineStyle3
                                 .copyWith(color: Colors.white),
                           ),
-                          const Gap(5),
+                          Gap(AppLayout.getHeight(5)),
                           Text(
                             "Number",
                             style: Styles.headLineStyle4
