@@ -84,6 +84,7 @@ class SearchScreen extends StatelessWidget {
               bigText: "Upcoming Flights", smallText: "View all"),
           Gap(AppLayout.getHeight(15)),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 padding: EdgeInsets.symmetric(
@@ -113,6 +114,43 @@ class SearchScreen extends StatelessWidget {
                     )
                   ],
                 ),
+              ),
+              // Second column
+              Column(
+                children: [
+                  Container(
+                    width: size.width * 0.44,
+                    height: AppLayout.getHeight(174),
+                    padding: EdgeInsets.symmetric(
+                      vertical: AppLayout.getHeight(15),
+                      horizontal: AppLayout.getWidth(15),
+                    ),
+                    decoration: BoxDecoration(
+                        color: const Color(0xFF3AB8B8),
+                        borderRadius:
+                            BorderRadius.circular(AppLayout.getHeight(18))),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Discount\nfor survey",
+                          style: Styles.headLineStyle2.copyWith(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Gap(AppLayout.getHeight(10)),
+                        Text(
+                          "Take the survey about our services and get discount",
+                          style: Styles.headLineStyle2.copyWith(
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white,
+                              fontSize: AppLayout.getHeight(18)),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
               )
             ],
           )
