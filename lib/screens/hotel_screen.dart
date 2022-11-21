@@ -25,12 +25,12 @@ class HotelScreen extends StatelessWidget {
           ),
         ],
       ),
-      height: 350,
+      height: AppLayout.getHeight(350),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            height: 180,
+            height: AppLayout.getHeight(180),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
               color: Styles.primaryColor,

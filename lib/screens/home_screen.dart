@@ -4,6 +4,7 @@ import 'package:gap/gap.dart';
 import 'package:tickets/screens/hotel_screen.dart';
 import 'package:tickets/screens/ticket_view.dart';
 import 'package:tickets/utils/app_info_list.dart';
+import 'package:tickets/utils/app_layout.dart';
 import 'package:tickets/utils/app_styles.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -43,8 +44,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                     Container(
-                      width: 50,
-                      height: 50,
+                      width: AppLayout.getWidth(50),
+                      height: AppLayout.getHeight(50),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: const DecorationImage(

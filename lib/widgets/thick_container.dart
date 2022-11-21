@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tickets/utils/app_layout.dart';
 
 class ThickContainer extends StatelessWidget {
   const ThickContainer({super.key});
@@ -10,7 +11,7 @@ class ThickContainer extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          width: 2.5,
+          width: AppLayout.getWidth(2.5),
           color: Colors.white,
         ),
       ),
