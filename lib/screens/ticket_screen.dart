@@ -50,9 +50,12 @@ class _TicketScreenState extends State<TicketScreen> {
                 //
                 Container(
                   margin: EdgeInsets.symmetric(
-                      horizontal: AppLayout.getWidth(15.5)),
-                  padding:
-                      EdgeInsets.symmetric(horizontal: AppLayout.getWidth(15)),
+                    horizontal: AppLayout.getWidth(15.5),
+                  ),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: AppLayout.getWidth(15),
+                    vertical: AppLayout.getHeight(20),
+                  ),
                   color: Colors.white,
                   child: Column(
                     children: [
@@ -75,7 +78,7 @@ class _TicketScreenState extends State<TicketScreen> {
                   ),
                 )
               ],
-            )
+            ),
           ],
         ),
       ),
