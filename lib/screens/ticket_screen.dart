@@ -7,6 +7,7 @@ import 'package:tickets/utils/app_styles.dart';
 import 'package:tickets/widgets/column_layout.dart';
 import 'package:tickets/widgets/layout_builder_widget.dart';
 import 'package:tickets/widgets/ticket_tabs.dart';
+import 'package:barcode_widget/barcode_widget.dart';
 
 class TicketScreen extends StatefulWidget {
   const TicketScreen({super.key});
@@ -116,7 +117,7 @@ class _TicketScreenState extends State<TicketScreen> {
                                     style: Styles.headLineStyle3.copyWith(
                                       color: Colors.black,
                                     ),
-                                  )
+                                  ),
                                 ],
                               ),
                               Gap(AppLayout.getHeight(5)),
@@ -134,6 +135,38 @@ class _TicketScreenState extends State<TicketScreen> {
                         ],
                       )
                     ],
+                  ),
+                ),
+
+                //
+                Container(
+                  margin: EdgeInsets.symmetric(
+                    horizontal: AppLayout.getHeight(15),
+                  ),
+                  padding: EdgeInsets.symmetric(
+                    vertical: AppLayout.getHeight(15),
+                  ),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(AppLayout.getHeight(21)),
+                        bottomRight: Radius.circular(AppLayout.getHeight(21)),
+                      )),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: AppLayout.getWidth(15)),
+                    child: ClipRRect(
+                      borderRadius:
+                          BorderRadius.circular(AppLayout.getHeight(15)),
+                      child: BarcodeWidget(
+                        barcode: Barcode.code128(),
+                        data: 'https://github.com/prosperchihimba',
+                        drawText: false,
+                        color: Styles.textColor,
+                        width: double.infinity,
+                        height: 70,
+                      ),
+                    ),
                   ),
                 )
               ],
