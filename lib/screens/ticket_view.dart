@@ -170,13 +170,15 @@ class TicketView extends StatelessWidget {
                     ),
                   ),
                   Expanded(
-                      child: Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: AppLayout.getWidth(12.0),
-                              vertical: AppLayout.getHeight(6.0)),
-                          child: LayoutBuilderSection(
-                            isColored: isColored,
-                          ))),
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(
+                          horizontal: AppLayout.getWidth(12.0),
+                          vertical: AppLayout.getHeight(6.0)),
+                      child: LayoutBuilderSection(
+                        isColored: isColored,
+                      ),
+                    ),
+                  ),
                   SizedBox(
                     height: AppLayout.getHeight(20),
                     width: AppLayout.getWidth(10),

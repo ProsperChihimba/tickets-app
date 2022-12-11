@@ -5,6 +5,7 @@ import 'package:tickets/utils/app_info_list.dart';
 import 'package:tickets/utils/app_layout.dart';
 import 'package:tickets/utils/app_styles.dart';
 import 'package:tickets/widgets/column_layout.dart';
+import 'package:tickets/widgets/layout_builder_widget.dart';
 import 'package:tickets/widgets/ticket_tabs.dart';
 
 class TicketScreen extends StatefulWidget {
@@ -70,6 +71,64 @@ class _TicketScreenState extends State<TicketScreen> {
                           AppColumnLayout(
                             firstText: "5221 478566",
                             secondText: "Passport",
+                            alignmentText: CrossAxisAlignment.end,
+                          ),
+                        ],
+                      ),
+                      Gap(AppLayout.getHeight(20)),
+                      const LayoutBuilderSection(
+                        isColored: true,
+                      ),
+                      Gap(AppLayout.getHeight(20)),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: const [
+                          AppColumnLayout(
+                            firstText: '364738 28274478',
+                            secondText: "Number of E-ticket",
+                            alignmentText: CrossAxisAlignment.start,
+                          ),
+                          AppColumnLayout(
+                            firstText: "B2SG28",
+                            secondText: "Booking code",
+                            alignmentText: CrossAxisAlignment.end,
+                          ),
+                        ],
+                      ),
+                      Gap(AppLayout.getHeight(20)),
+                      const LayoutBuilderSection(
+                        isColored: true,
+                      ),
+                      Gap(AppLayout.getHeight(20)),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Image.asset(
+                                    "assets/images/visa.png",
+                                    scale: 11,
+                                  ),
+                                  Text(
+                                    " *** 2462",
+                                    style: Styles.headLineStyle3.copyWith(
+                                      color: Colors.black,
+                                    ),
+                                  )
+                                ],
+                              ),
+                              Gap(AppLayout.getHeight(5)),
+                              Text(
+                                "Payment method",
+                                style: Styles.headLineStyle4,
+                              ),
+                            ],
+                          ),
+                          const AppColumnLayout(
+                            firstText: "\$2,399",
+                            secondText: "Price",
                             alignmentText: CrossAxisAlignment.end,
                           ),
                         ],
