@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:tickets/utils/app_layout.dart';
 
 class ThickContainer extends StatelessWidget {
-  const ThickContainer({super.key});
+  final bool? isColored;
+  const ThickContainer({super.key, this.isColored});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class ThickContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
           width: AppLayout.getWidth(2.5),
-          color: Colors.white,
+          color: isColored == null ? Colors.white : const Color(0xFF8ACCF7),
         ),
       ),
     );
