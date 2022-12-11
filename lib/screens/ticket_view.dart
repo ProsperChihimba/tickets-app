@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:get/utils.dart';
 import 'package:tickets/utils/app_layout.dart';
 import 'package:tickets/utils/app_styles.dart';
 import 'package:tickets/widgets/thick_container.dart';
@@ -7,7 +8,11 @@ import 'package:tickets/widgets/thick_container.dart';
 class TicketView extends StatelessWidget {
   final Map<String, dynamic> ticket;
   final bool? isColored;
-  const TicketView({super.key, required this.ticket, this.isColored});
+  const TicketView({
+    super.key,
+    required this.ticket,
+    this.isColored,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +20,7 @@ class TicketView extends StatelessWidget {
 
     return SizedBox(
       width: size.width * 0.85,
-      height: AppLayout.getHeight(200),
+      height: AppLayout.getHeight(GetPlatform.isAndroid == true ? 164 : 166),
       child: Container(
         margin: EdgeInsets.only(right: AppLayout.getHeight(16)),
         child: Column(
@@ -126,8 +131,7 @@ class TicketView extends StatelessWidget {
                         style: isColored == null
                             ? Styles.headLineStyle4
                                 .copyWith(color: Colors.white)
-                            : Styles.headLineStyle4
-                                .copyWith(color: Colors.black),
+                            : Styles.headLineStyle4,
                       ),
                       SizedBox(
                         width: AppLayout.getWidth(100),
@@ -213,9 +217,9 @@ class TicketView extends StatelessWidget {
             Container(
               decoration: BoxDecoration(
                   color: isColored == null ? Styles.orangeColor : Colors.white,
-                  borderRadius: const BorderRadius.only(
-                    bottomLeft: Radius.circular(21),
-                    bottomRight: Radius.circular(21),
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(isColored == null ? 21 : 0),
+                    bottomRight: Radius.circular(isColored == null ? 21 : 0),
                   )),
               padding: EdgeInsets.only(
                   left: AppLayout.getWidth(16.0),

@@ -4,6 +4,7 @@ import 'package:tickets/screens/ticket_view.dart';
 import 'package:tickets/utils/app_info_list.dart';
 import 'package:tickets/utils/app_layout.dart';
 import 'package:tickets/utils/app_styles.dart';
+import 'package:tickets/widgets/column_layout.dart';
 import 'package:tickets/widgets/ticket_tabs.dart';
 
 class TicketScreen extends StatefulWidget {
@@ -18,6 +19,7 @@ class _TicketScreenState extends State<TicketScreen> {
   Widget build(BuildContext context) {
     final size = AppLayout.getSize(context);
     return Scaffold(
+      backgroundColor: Styles.bgColor,
       body: SafeArea(
         child: Stack(
           children: [
@@ -39,10 +41,37 @@ class _TicketScreenState extends State<TicketScreen> {
                 ),
                 Gap(AppLayout.getHeight(20)),
                 Container(
-                  padding: EdgeInsets.only(left: AppLayout.getHeight(15)),
+                  padding: EdgeInsets.only(left: AppLayout.getWidth(15)),
                   child: TicketView(
                     ticket: ticketList[0],
                     isColored: true,
+                  ),
+                ),
+                //
+                Container(
+                  margin: EdgeInsets.symmetric(
+                      horizontal: AppLayout.getWidth(15.5)),
+                  padding:
+                      EdgeInsets.symmetric(horizontal: AppLayout.getWidth(15)),
+                  color: Colors.white,
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: const [
+                          AppColumnLayout(
+                            firstText: "Flutter DB",
+                            secondText: "Passenger",
+                            alignmentText: CrossAxisAlignment.start,
+                          ),
+                          AppColumnLayout(
+                            firstText: "5221 478566",
+                            secondText: "Passport",
+                            alignmentText: CrossAxisAlignment.end,
+                          ),
+                        ],
+                      )
+                    ],
                   ),
                 )
               ],
