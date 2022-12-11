@@ -3,6 +3,7 @@ import 'package:gap/gap.dart';
 import 'package:tickets/utils/app_layout.dart';
 import 'package:tickets/utils/app_styles.dart';
 import 'package:tickets/widgets/icon_text_widget.dart';
+import 'package:tickets/widgets/ticket_tabs.dart';
 
 import '../widgets/double_text_widget.dart';
 
@@ -27,38 +28,7 @@ class SearchScreen extends StatelessWidget {
           ),
           Gap(AppLayout.getHeight(20)),
           //
-          FittedBox(
-            child: Container(
-              padding: const EdgeInsets.all(3.5),
-              child: Row(
-                children: [
-                  Container(
-                    padding:
-                        EdgeInsets.symmetric(vertical: AppLayout.getHeight(7)),
-                    child: Center(child: Text("Airline tickets")),
-                    width: size.width * .44,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.horizontal(
-                            left: Radius.circular(AppLayout.getHeight(50))),
-                        color: Colors.white),
-                  ),
-                  Container(
-                    padding:
-                        EdgeInsets.symmetric(vertical: AppLayout.getHeight(7)),
-                    child: Center(child: Text("Hotels")),
-                    width: size.width * .44,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.horizontal(
-                            right: Radius.circular(AppLayout.getHeight(50))),
-                        color: Colors.transparent),
-                  ),
-                ],
-              ),
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(AppLayout.getHeight(50)),
-                  color: const Color(0xFFF4F7FD)),
-            ),
-          ),
+          const AppTicketTabs(),
           //
           Gap(AppLayout.getHeight(25)),
           const AppIconText(
@@ -200,6 +170,16 @@ class SearchScreen extends StatelessWidget {
                         Gap(
                           AppLayout.getHeight(15),
                         ),
+                        RichText(
+                          text: const TextSpan(children: [
+                            TextSpan(
+                                text: "🥰", style: TextStyle(fontSize: 28)),
+                            TextSpan(
+                                text: "🥰", style: TextStyle(fontSize: 40)),
+                            TextSpan(
+                                text: "🥰", style: TextStyle(fontSize: 28)),
+                          ]),
+                        )
                       ],
                     ),
                   ),
