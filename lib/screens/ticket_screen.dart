@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:tickets/screens/ticket_view.dart';
+import 'package:tickets/utils/app_info_list.dart';
 import 'package:tickets/utils/app_layout.dart';
 import 'package:tickets/utils/app_styles.dart';
 import 'package:tickets/widgets/ticket_tabs.dart';
@@ -30,10 +32,16 @@ class _TicketScreenState extends State<TicketScreen> {
                   "Tickets",
                   style: Styles.headLineStyle,
                 ),
+                Gap(AppLayout.getHeight(20)),
                 const AppTicketTabs(
                   firstTab: "Upcoming",
                   secondTab: "Previous",
                 ),
+                Gap(AppLayout.getHeight(20)),
+                Container(
+                  padding: EdgeInsets.only(left: AppLayout.getHeight(15)),
+                  child: TicketView(ticket: ticketList[0]),
+                )
               ],
             )
           ],
